@@ -1,0 +1,364 @@
+body{
+    padding: 0;;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header{
+    background: #414361;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 12px;
+}
+
+.logoTitre .HOM h1{
+    font-size: 35px;
+}
+.burger{
+    display: block;
+    cursor: pointer;
+}
+  
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(216, 215, 215);
+    margin: 5px;
+    transition: all 0.3s ease;
+  
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.sidebar{
+    position: absolute;
+    z-index: 20000;
+    flex-direction: column;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    width: 15%;
+    min-height: 80vh;
+    transition: 0.5s ease-in-out;
+    transform: translateX(-300%);
+}
+
+.nav-active{
+    transform: translateX(0%);
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar div a {
+    text-decoration: none;
+    color:#414361;
+}
+.sidebar div .navbar-links{
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.sidebar div .navbar-links:hover {
+    background: #414361;
+}
+.sidebar div .navbar-links:hover a{
+    color: white;
+}
+
+.profile-sidebar{
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecf2;
+    display: flex;
+    align-items: center;
+}
+
+.img-responsive{
+    float: left;
+    margin: 10px 0px 0px 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px!important;
+}
+
+.profile-user{
+    float: left;
+    text-align: left;
+    margin: 10px 0 0 12px;
+}
+
+.profile-username{
+    font-size: 20px;
+    margin-bottom: 0px;
+    color: #414361;
+}
+@media screen and (max-width:1150px) {
+    .sidebar{
+        width: 100%;
+        z-index: 10;
+    }
+}
+/* Accordion sidebar */
+.accordion {
+    background-color: white;
+    color: #414361;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+.scroller {
+    width: 15%;
+    height: 89vh;
+    overflow-y: scroll;
+}
+.active, .accordion:hover {
+    background-color: #414361;
+}
+.active, .accordion:hover a{
+      color: white;
+}
+.accordion:after {
+    content: '\002B';
+    color: #414361;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion:hover::after{
+    color: white;
+}
+
+.active:after {
+    content: "\2212";
+}
+.active, .accordion:hover a:focus{
+    background: none;
+}
+.panel{
+    background-color: rgb(255, 253, 253);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-stuff{
+    width: 25px;
+    height:25px;
+}
+.align-stuff{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+}
+.align-stuff img{
+    float: left;
+    padding-right: 15px;
+}
+.align-stuff:hover{
+    background: #414361;
+    color: white;
+}
+@media screen and (max-width:1150px) {
+    .scroller{
+        width: 100%;
+        z-index: 10;
+    }
+}
+/* Accordion stuff */
+.accordion-stuff {
+    margin-top: 1%;
+    background-color: white;
+    color: #414361;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+.marginLeft{
+    transform: translateX(18%);
+    transition: 0.5s ease-in-out;
+    width: 84%;
+}
+.accordion-stuff a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.active, .accordion-stuff:hover {
+    background-color: #414361b9;
+}
+.active, .accordion-stuff:hover a{
+      color: white;
+}
+.accordion-stuff:after {
+    content: '\002B';
+    color: #414361;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.accordion-stuff:hover::after{
+    color: white;
+}
+
+.active:after {
+    content: "\2212";
+}
+.active, .accordion-stuff:hover a:focus{
+    background: none;
+}
+.panel{
+    background-color: rgb(255, 253, 253);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+/* SECTION STUFF */
+.container-all-stuff{
+    transition: .5s ease-in-out;
+}
+.container-stuff{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.container{
+    position: relative;
+    margin: 1%;
+}
+
+.container .carte{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .carte:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #bf9eeb;
+    clip-path: circle(200px at 80% 10%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .carte:hover:before{
+    clip-path: circle(270px at 80% -15%);
+}
+
+.container .carte:after{
+    content: 'Stuff';
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    font-size: 6em;
+    font-weight: 800;
+    font-size: italic;
+    color: rgb(255,255,255,0.04);  
+}
+
+.container .carte .imgBx{
+    position: absolute;
+    top: 18%;
+    left: 22%;
+    transform: rotateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container .carte:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.container .carte .imgBx img{
+    width: 60%;
+    position: absolute;
+}
+
+.container .carte .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container .carte:hover .contentBx{
+    height: 150px;
+}
+
+.container .carte .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.container .carte .contentBx a{
+    display: inline-block;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .carte .contentBx a:hover{
+    display: inline-block;
+    padding: 10px;
+    background: #f08d5f;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transition: 0.2s;
+}
+.container .carte:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+}
